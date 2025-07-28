@@ -5,6 +5,8 @@ def on_triple_click(event):
 
 root = tk.Tk()
 root.title("Triple Click Example")
+root.geometry("300x200")
+root.configure(bg="lightblue")
 
 label = tk.Label(root, text="Triple-click me", font=("Arial", 14))
 label.pack(pady=40)
