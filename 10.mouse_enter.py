@@ -1,15 +1,16 @@
 import tkinter as tk
 
-def mouse_motion(event):
-    print(f"Mouse at: x={event.x}, y={event.y}")
+def on_enter(event):
+    event.widget.config(bg="lightgreen")
+    print("Mouse entered the widget")
 
 root = tk.Tk()
-root.title("Mouse Motion Demo")
+root.title("Enter Event Example")
 
-label = tk.Label(root, text="Move mouse over me", bg="yellow", width=30, height=5)
-label.pack(pady=30)
+label = tk.Label(root, text="Hover over me", bg="lightgray", width=25, height=5)
+label.pack(pady=20)
 
-# Binding the <Motion> event
-label.bind("<Motion>", mouse_motion)
+# Bind <Enter> event
+label.bind("<Enter>", on_enter)
 
 root.mainloop()
